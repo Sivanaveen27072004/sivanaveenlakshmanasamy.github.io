@@ -69,6 +69,7 @@ body {
 .main-nav a:hover {
   color: #38bdf8;
 }
+
 /* CAREER SECTION */
 .career {
   display: flex;
@@ -120,12 +121,18 @@ body {
   min-width: 350px;
 }
 
-.career-summary h2 {
+/* Header (Career Summary + Resume Button on same line) */
+.career-summary-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #38bdf8;
   margin-bottom: 15px;
+}
+
+.career-summary-header h2 {
+  color: #38bdf8;
+  font-size: 1.8rem;
+  margin: 0;
 }
 
 /* Resume button (Red style with icon) */
@@ -149,11 +156,8 @@ body {
 }
 
 .resume-btn i {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
-
-
-
 
 /* CONTACT */
 .contact {
@@ -209,4 +213,3 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
-
