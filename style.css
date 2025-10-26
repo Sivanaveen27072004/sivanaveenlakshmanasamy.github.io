@@ -128,20 +128,30 @@ body {
   margin-bottom: 15px;
 }
 
-.btn-download {
-  background: #38bdf8;
-  color: #0f172a;
-  padding: 0.6rem 1rem;
+/* Resume button (Red style with icon) */
+.resume-btn {
+  background-color: #ef4444; /* red-500 */
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
   border-radius: 8px;
-  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
   font-weight: 600;
-  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.btn-download:hover {
-  background: #0ea5e9;
+.resume-btn:hover {
+  background-color: #dc2626; /* darker red */
   transform: scale(1.05);
 }
+
+.resume-btn i {
+  font-size: 1rem;
+}
+
 
 
 
