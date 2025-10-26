@@ -72,19 +72,27 @@ body {
 
 /* CAREER SECTION */
 .career {
-  padding: 4rem 2rem;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 80px;
+  padding: 40px 10%;
+  flex-wrap: wrap;
 }
 
+/* Container for both photo and text */
 .career-container {
   display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  gap: 2rem;
+  flex-direction: row;
+  gap: 40px;
   align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
+/* Left side – rectangular image */
 .photo-box {
   flex: 1;
   max-width: 400px;
@@ -94,12 +102,12 @@ body {
 }
 
 .photo-box img {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  border-radius: 12px; /* small rounding, not circle */
   object-fit: cover;
-  border: 5px solid #38bdf8;
-  box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(56, 189, 248, 0.4);
 }
 
 .career-summary {
