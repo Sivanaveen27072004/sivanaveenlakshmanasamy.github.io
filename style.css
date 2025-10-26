@@ -75,27 +75,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 40px;
   margin-top: 80px;
   padding: 40px 10%;
-  flex-wrap: wrap;
 }
 
 /* Container for both photo and text */
 .career-container {
   display: flex;
   flex-direction: row;
-  gap: 40px;
-  align-items: flex-start;
+  align-items: stretch; /* Ensures equal height for both */
   justify-content: center;
   width: 100%;
-  flex-wrap: wrap;
+  max-width: 1200px;
+  gap: 40px;
 }
 
-/* Left side – rectangular image */
+/* Left side – rectangular image (35%) */
 .photo-box {
-  flex: 1;
-  max-width: 600px;
+  flex: 0 0 35%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,22 +100,27 @@ body {
 
 .photo-box img {
   width: 100%;
-  height: 600px;
-  border-radius: 12px; /* small rounding, not circle */
+  height: 100%;
+  border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   border: 2px solid rgba(56, 189, 248, 0.4);
 }
 
+/* Right side – career summary (65%) */
 .career-summary {
-  flex: 2 1 500px;
+  flex: 0 0 65%;
   background: rgba(15, 23, 42, 0.8);
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
   line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+/* Header: Career Summary + Resume button */
 .summary-header {
   display: flex;
   justify-content: space-between;
@@ -131,20 +133,43 @@ body {
   font-size: 1.8rem;
 }
 
+/* Resume Button (red version if you prefer blue, change color) */
 .btn-download {
-  background: #38bdf8;
-  color: #0f172a;
+  background: #ef4444;
+  color: #fff;
   padding: 0.6rem 1rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .btn-download:hover {
-  background: #0ea5e9;
+  background: #dc2626;
   transform: scale(1.05);
 }
+
+/* Responsive behavior for small screens */
+@media (max-width: 900px) {
+  .career-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo-box,
+  .career-summary {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .photo-box img {
+    height: auto;
+  }
+}
+
 
 /* CONTACT */
 .contact {
