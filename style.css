@@ -72,91 +72,68 @@ body {
 
 /* CAREER SECTION */
 .career {
+  padding: 4rem 2rem;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  margin-top: 80px;
-  padding: 40px 10%;
-  flex-wrap: wrap;
 }
 
-/* Container for both photo and text */
 .career-container {
   display: flex;
-  flex-direction: row;
-  gap: 40px;
-  align-items: flex-start;
-  justify-content: center;
-  width: 100%;
   flex-wrap: wrap;
+  max-width: 1200px;
+  gap: 2rem;
+  align-items: flex-start;
 }
 
-/* Left side – rectangular image */
 .photo-box {
-  flex: 1;
-  max-width: 400px;
+  flex: 1 1 300px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .photo-box img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px; /* small rounding, not circle */
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  border: 2px solid rgba(56, 189, 248, 0.4);
+  border: 5px solid #38bdf8;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
 }
 
-/* Right side – career summary */
 .career-summary {
-  flex: 2;
-  background: rgba(15, 23, 42, 0.5);
-  color: #e2e8f0;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  min-width: 350px;
+  flex: 2 1 500px;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+  line-height: 1.7;
 }
 
-/* Header (Career Summary + Resume Button on same line) */
-.career-summary-header {
+.summary-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 1.2rem;
 }
 
-.career-summary-header h2 {
+.summary-header h2 {
   color: #38bdf8;
   font-size: 1.8rem;
-  margin: 0;
 }
 
-/* Resume button (Red style with icon) */
-.resume-btn {
-  background-color: #ef4444; /* red-500 */
-  color: #fff;
-  padding: 8px 16px;
-  border: none;
+.btn-download {
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 0.6rem 1rem;
   border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  text-decoration: none;
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  transition: 0.3s;
 }
 
-.resume-btn:hover {
-  background-color: #dc2626; /* darker red */
+.btn-download:hover {
+  background: #0ea5e9;
   transform: scale(1.05);
-}
-
-.resume-btn i {
-  font-size: 1.1rem;
 }
 
 /* CONTACT */
