@@ -95,7 +95,7 @@ body {
 /* Left side – rectangular image */
 .photo-box {
   flex: 1;
-  max-width: 400px;
+  max-width: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,7 +103,7 @@ body {
 
 .photo-box img {
   width: 100%;
-  height: auto;
+  height: 600px;
   border-radius: 12px; /* small rounding, not circle */
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
