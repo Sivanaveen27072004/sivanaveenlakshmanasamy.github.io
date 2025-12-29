@@ -1,5 +1,5 @@
 /* ================================
-   GLOBAL STYLES
+   GLOBAL
 ================================ */
 * {
   margin: 0;
@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-body.experience-page {
+body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #0f172a 40%, #1e293b 100%);
   color: #e2e8f0;
@@ -17,30 +17,34 @@ body.experience-page {
 /* ================================
    HEADER
 ================================ */
-.exp-header {
+.edu-header {
   text-align: center;
   padding: 2.5rem 1rem 2rem;
-  position: relative;
 }
 
-.exp-name {
+.edu-header .name {
   font-size: 2.6rem;
   font-weight: 800;
   color: #38bdf8;
 }
 
-.exp-subtitle {
+.edu-header .subtitle {
   font-size: 1.2rem;
   color: #94a3b8;
-  margin-top: 0.4rem;
+  margin-top: 6px;
   letter-spacing: 1px;
 }
 
-/* HOME BUTTON */
-.home-btn {
+/* ================================
+   HOME BUTTON
+================================ */
+.home-btn-container {
   position: absolute;
   top: 25px;
   left: 25px;
+}
+
+.home-btn {
   background: #38bdf8;
   color: #0f172a;
   padding: 0.6rem 1rem;
@@ -56,96 +60,49 @@ body.experience-page {
 }
 
 /* ================================
-   EXPERIENCE SECTION
+   EDUCATION SECTION
 ================================ */
-.experience-container {
+.education-section {
+  padding: 2.5rem 10%;
   width: 100%;
-  padding: 2rem 10%;
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
-/* EXPERIENCE CARD */
-.exp-card {
-  background: rgba(15, 23, 42, 0.9);
-  border-left: 5px solid #38bdf8;
-  padding: 1.8rem 2rem;
-  border-radius: 16px;
-  box-shadow: 0 0 25px rgba(56, 189, 248, 0.12);
-  transition: all 0.35s ease;
-}
-
-.exp-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 30px rgba(56, 189, 248, 0.25);
-}
-
-/* CARD CONTENT */
-.exp-card h2 {
-  font-size: 1.45rem;
-  color: #38bdf8;
-  margin-bottom: 0.3rem;
-}
-
-.exp-card h2 span {
-  color: #f8fafc;
-  font-weight: 400;
-}
-
-.exp-date {
-  font-size: 0.95rem;
-  color: #94a3b8;
-  margin-bottom: 1rem;
-  font-style: italic;
-}
-
-.exp-card p {
-  line-height: 1.75;
-  font-size: 1rem;
-  color: #e2e8f0;
 }
 
 /* ================================
-   CONTACT SECTION (INDEX MATCH)
+   TABLE (DESKTOP)
 ================================ */
-.contact {
-  background: #0f172a;
-  padding: 3.5rem 1rem 3rem;
+.education-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.12);
+}
+
+.education-table thead {
+  background: rgba(30, 41, 59, 0.95);
+}
+
+.education-table th,
+.education-table td {
+  padding: 1rem;
   text-align: center;
-  margin-top: 3rem;
+  font-size: 0.95rem;
 }
 
-.contact h2 {
+.education-table th {
   color: #38bdf8;
-  font-size: 1.9rem;
-  margin-bottom: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-/* CONTACT BUTTONS */
-.contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+.education-table td {
+  color: #e2e8f0;
+  border-top: 1px solid rgba(56, 189, 248, 0.15);
 }
 
-.contact-links a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: #1e293b;
-  padding: 0.85rem 1.4rem;
-  border-radius: 8px;
-  color: #38bdf8;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.contact-links a:hover {
-  background: #334155;
-  transform: translateY(-3px);
+.education-table tbody tr:hover {
+  background: rgba(56, 189, 248, 0.06);
 }
 
 /* ================================
@@ -157,54 +114,80 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   color: #94a3b8;
+  margin-top: 3rem;
 }
 
 /* ================================
-   RESPONSIVE (MOBILE)
+   RESPONSIVE (TABLE → CARDS)
 ================================ */
-@media (max-width: 1024px) {
-  .experience-container {
-    padding: 2rem 6%;
-  }
-}
+@media (max-width: 900px) {
 
-@media (max-width: 768px) {
-
-  .exp-name {
-    font-size: 1.9rem;
+  .education-section {
+    padding: 2rem 5%;
   }
 
-  .exp-subtitle {
+  .edu-header .name {
+    font-size: 2rem;
+  }
+
+  .edu-header .subtitle {
     font-size: 1rem;
   }
 
-  .home-btn {
+  /* Hide table header */
+  .education-table thead {
+    display: none;
+  }
+
+  /* Convert rows to cards */
+  .education-table,
+  .education-table tbody,
+  .education-table tr,
+  .education-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .education-table tr {
+    background: rgba(15, 23, 42, 0.9);
+    margin-bottom: 1.5rem;
+    border-radius: 14px;
+    padding: 1rem;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+  }
+
+  .education-table td {
+    text-align: left;
+    padding: 0.6rem 0;
+    border: none;
+    font-size: 0.95rem;
+  }
+
+  .education-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #38bdf8;
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+}
+
+/* ================================
+   SMALL MOBILE
+================================ */
+@media (max-width: 480px) {
+
+  .home-btn-container {
     top: 15px;
     left: 15px;
-    padding: 0.5rem 0.8rem;
+  }
+
+  .home-btn {
+    padding: 0.45rem 0.7rem;
     font-size: 0.85rem;
   }
 
-  .experience-container {
-    padding: 1.5rem 5%;
-  }
-
-  .exp-card {
-    padding: 1.4rem;
-  }
-
-  .exp-card h2 {
-    font-size: 1.25rem;
-  }
-
-  .contact-links {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-links a {
-    width: 100%;
-    max-width: 280px;
-    justify-content: center;
+  .edu-header .name {
+    font-size: 1.7rem;
   }
 }
