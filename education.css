@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +8,6 @@
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #0f172a, #1e293b);
   color: #e2e8f0;
-  min-height: 100vh;
 }
 
 /* HEADER */
@@ -21,45 +18,40 @@
 }
 
 .edu-name {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 800;
   color: #38bdf8;
 }
 
 .edu-subtitle {
   color: #94a3b8;
-  font-size: 1.2rem;
   margin-top: 5px;
 }
 
-/* HOME BUTTON (EXACT EXPERIENCE STYLE) */
+/* HOME BUTTON */
 .home-btn {
   position: absolute;
-  left: 30px;
-  top: 30px;
+  top: 25px;
+  left: 25px;
   background: #38bdf8;
   color: #0f172a;
   padding: 0.6rem 1rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.3s;
-}
-.home-btn:hover {
-  background: #0ea5e9;
-  transform: scale(1.05);
 }
 
-/* DESKTOP TABLE */
+/* EDUCATION SECTION */
 .education-section {
   padding: 2rem 10%;
 }
 
+/* TABLE (PC) */
 .education-table {
   width: 100%;
   border-collapse: collapse;
   background: rgba(15, 23, 42, 0.9);
-  border-radius: 14px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
@@ -77,27 +69,21 @@
   color: #38bdf8;
 }
 
-.education-table tbody tr {
-  border-bottom: 1px solid rgba(56,189,248,0.15);
-}
-
 .education-table tbody tr:hover {
   background: rgba(56,189,248,0.08);
 }
 
-/* MOBILE CARDS */
+/* MOBILE CARDS (HIDDEN ON PC) */
+.edu-cards {
+  display: none;
+}
+
 .edu-card {
   background: rgba(15, 23, 42, 0.9);
   border-left: 4px solid #38bdf8;
   padding: 1.5rem;
-  border-radius: 14px;
+  border-radius: 12px;
   margin-bottom: 1.5rem;
-  box-shadow: 0 0 20px rgba(56,189,248,0.15);
-}
-
-.edu-card h3 {
-  color: #38bdf8;
-  margin-bottom: 0.6rem;
 }
 
 /* CONTACT */
@@ -115,21 +101,16 @@
 .contact-links {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
   flex-wrap: wrap;
 }
 
 .contact-links a {
   background: #1e293b;
-  padding: 0.8rem 1.2rem;
+  padding: 0.8rem 1.3rem;
   border-radius: 8px;
   color: #38bdf8;
   text-decoration: none;
-  transition: 0.3s;
-}
-
-.contact-links a:hover {
-  background: #334155;
 }
 
 /* FOOTER */
@@ -140,17 +121,11 @@ footer {
   color: #94a3b8;
 }
 
-/* RESPONSIVE */
-.desktop-only {
-  display: block;
-}
-.mobile-only {
-  display: none;
-}
-
+/* MOBILE FIX */
 @media (max-width: 768px) {
+
   .edu-name {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
   }
 
   .home-btn {
@@ -160,18 +135,25 @@ footer {
   }
 
   .education-section {
-    padding: 1.5rem 6%;
+    padding: 1.5rem;
   }
 
-  .desktop-only {
+  .education-table {
     display: none;
   }
 
-  .mobile-only {
+  .edu-cards {
     display: block;
   }
 
   .contact-links {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-links a {
+    width: 100%;
+    max-width: 260px;
+    justify-content: center;
   }
 }
