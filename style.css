@@ -70,6 +70,17 @@ body {
   color: #38bdf8;
 }
 
+@media (max-width: 600px) {
+  .name {
+    font-size: 2rem;
+  }
+
+  .roles {
+    font-size: 0.95rem;
+  }
+}
+
+
 /* CAREER SECTION */
 .career {
   display: flex;
@@ -154,9 +165,14 @@ body {
 
 /* Responsive behavior for small screens */
 @media (max-width: 900px) {
+  .career {
+    padding: 20px 5%;
+  }
+
   .career-container {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: 25px;
   }
 
   .photo-box,
@@ -167,8 +183,21 @@ body {
 
   .photo-box img {
     height: auto;
+    max-height: 420px;
+  }
+
+  .summary-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .btn-download {
+    width: 100%;
+    justify-content: center;
   }
 }
+
 
 
 /* CONTACT */
@@ -205,6 +234,19 @@ body {
   background: #334155;
 }
 
+@media (max-width: 600px) {
+  .contact-links {
+    flex-direction: column;
+  }
+
+  .contact-links a {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+  }
+}
+
+
 /* FOOTER */
 footer {
   text-align: center;
@@ -225,3 +267,17 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 1rem;
+  }
+
+  .main-nav li {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+}
+
