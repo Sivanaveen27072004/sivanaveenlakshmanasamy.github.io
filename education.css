@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
+/* ================================
+   GLOBAL
+================================ */
 * {
   margin: 0;
   padding: 0;
@@ -8,149 +9,185 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  background: linear-gradient(135deg, #0f172a 40%, #1e293b 100%);
   color: #e2e8f0;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
-/* HEADER */
+/* ================================
+   HEADER
+================================ */
 .edu-header {
   text-align: center;
-  margin-top: 2rem;
+  padding: 2.5rem 1rem 2rem;
 }
 
-.name {
-  font-size: 3rem;
-  font-weight: 700;
+.edu-header .name {
+  font-size: 2.6rem;
+  font-weight: 800;
   color: #38bdf8;
-  letter-spacing: 2px;
 }
 
-.subtitle {
+.edu-header .subtitle {
   font-size: 1.2rem;
-  color: #f8fafc;
-  margin-top: 0.3rem;
+  color: #94a3b8;
+  margin-top: 6px;
+  letter-spacing: 1px;
 }
 
-/* HOME BUTTON */
+/* ================================
+   HOME BUTTON
+================================ */
 .home-btn-container {
-  text-align: center;
-  margin-top: 1.5rem;
+  position: absolute;
+  top: 25px;
+  left: 25px;
 }
 
 .home-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  background: #1e293b;
-  color: #38bdf8;
-  padding: 0.7rem 1.2rem;
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 0.6rem 1rem;
   border-radius: 8px;
-  transition: 0.3s;
   font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 
 .home-btn:hover {
-  background: #334155;
+  background: #0ea5e9;
   transform: scale(1.05);
 }
 
-/* EDUCATION TABLE */
+/* ================================
+   EDUCATION SECTION
+================================ */
 .education-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  margin: 2rem 0;
+  padding: 2.5rem 10%;
+  width: 100%;
 }
 
+/* ================================
+   TABLE (DESKTOP)
+================================ */
 .education-table {
-  width: 90%;
-  max-width: 900px;
+  width: 100%;
   border-collapse: collapse;
-  background: rgba(15, 23, 42, 0.7);
-  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.12);
 }
 
-.education-table th, .education-table td {
+.education-table thead {
+  background: rgba(30, 41, 59, 0.95);
+}
+
+.education-table th,
+.education-table td {
   padding: 1rem;
   text-align: center;
-  border-bottom: 1px solid rgba(56, 189, 248, 0.3);
+  font-size: 0.95rem;
 }
 
 .education-table th {
-  background: rgba(56, 189, 248, 0.2);
   color: #38bdf8;
-  font-weight: 700;
-  font-size: 1rem;
-  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-.education-table tr:last-child td {
-  border-bottom: none;
+.education-table td {
+  color: #e2e8f0;
+  border-top: 1px solid rgba(56, 189, 248, 0.15);
 }
 
 .education-table tbody tr:hover {
-  background: rgba(30, 58, 138, 0.4);
-  transition: 0.3s;
+  background: rgba(56, 189, 248, 0.06);
 }
 
-/* CONTACT */
-.contact {
+/* ================================
+   FOOTER (INDEX MATCH)
+================================ */
+footer {
+  background: #1e293b;
+  padding: 1.2rem 0;
   text-align: center;
-  padding: 3rem 1rem;
-  background: #0f172a;
+  font-size: 0.9rem;
+  color: #94a3b8;
   margin-top: 3rem;
 }
 
-.contact h2 {
-  color: #38bdf8;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+/* ================================
+   RESPONSIVE (TABLE → CARDS)
+================================ */
+@media (max-width: 900px) {
+
+  .education-section {
+    padding: 2rem 5%;
+  }
+
+  .edu-header .name {
+    font-size: 2rem;
+  }
+
+  .edu-header .subtitle {
+    font-size: 1rem;
+  }
+
+  /* Hide table header */
+  .education-table thead {
+    display: none;
+  }
+
+  /* Convert rows to cards */
+  .education-table,
+  .education-table tbody,
+  .education-table tr,
+  .education-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .education-table tr {
+    background: rgba(15, 23, 42, 0.9);
+    margin-bottom: 1.5rem;
+    border-radius: 14px;
+    padding: 1rem;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+  }
+
+  .education-table td {
+    text-align: left;
+    padding: 0.6rem 0;
+    border: none;
+    font-size: 0.95rem;
+  }
+
+  .education-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #38bdf8;
+    display: block;
+    margin-bottom: 0.2rem;
+  }
 }
 
-.contact-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
+/* ================================
+   SMALL MOBILE
+================================ */
+@media (max-width: 480px) {
 
-.contact-links a {
-  text-decoration: none;
-  background: #1e293b;
-  padding: 0.8rem 1.2rem;
-  border-radius: 8px;
-  color: #38bdf8;
-  transition: 0.3s;
-}
+  .home-btn-container {
+    top: 15px;
+    left: 15px;
+  }
 
-.contact-links a:hover {
-  background: #334155;
-}
+  .home-btn {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.85rem;
+  }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 1rem 0;
-  background: #1e293b;
-  color: #94a3b8;
-  font-size: 0.9rem;
-}
-
-/* FADE-IN EFFECT */
-.fade {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease-out;
-}
-
-.visible {
-  opacity: 1;
-  transform: translateY(0);
+  .edu-header .name {
+    font-size: 1.7rem;
+  }
 }
