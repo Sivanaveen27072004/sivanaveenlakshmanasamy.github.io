@@ -1,88 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CubeSat Project | Sivanaveen</title>
 
-  <link rel="stylesheet" href="cubesat.css" />
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="cubesat.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
-<body class="cubesat-page">
+<body>
 
   <!-- HEADER -->
-  <header class="proj-header">
-    <a href="projects.html" class="home-btn"><i class='bx bx-arrow-back'></i> Projects</a>
-    <h1 class="proj-name">SIVANAVEEN LAKSHMANASAMY</h1>
-    <p class="proj-subtitle">Weather Forecasting Based on CubeSat</p>
+  <header class="project-header">
+    <a href="projects.html" class="home-btn">
+      <i class='bx bx-arrow-back'></i> Back
+    </a>
+
+    <h1>Weather Forecasting Based on CubeSat</h1>
+    <p class="subtitle">Academic Project</p>
   </header>
 
-  <!-- PROJECT DETAILS -->
-  <section class="project-details">
+  <!-- PROJECT DESCRIPTION -->
+  <section class="project-description">
+    <h2>Project Overview</h2>
+    <p>
+      Designed and developed a real-time weather forecasting CubeSat system using <b>Arduino Uno</b>.
+      The CubeSat collects live environmental data such as temperature, humidity, rainfall, wind speed,
+      and pressure, and transmits it to a ground station using <b>LoRa communication</b>.
+    </p>
 
-    <div class="detail-card">
-      <h2><i class='bx bx-detail'></i> Project Details</h2>
-      <p>
-        Designed and developed a real-time weather forecasting CubeSat system using
-        <b>Arduino Uno</b>. The CubeSat collects live environmental data such as
-        <b>temperature, humidity, rainfall, wind speed, and atmospheric pressure</b>
-        and transmits it to a ground station via <b>LoRa communication</b>.
-      </p>
+    <p>
+      The system includes a <b>GSM module</b> for sending SMS alerts to users in remote areas and a
+      <b>buzzer alert system</b> for critical weather conditions. Powered by <b>solar energy</b>,
+      the solution is sustainable, low-cost, and ideal for real-time monitoring without internet access.
+    </p>
+  </section>
 
-      <p>
-        The system integrates a <b>GSM module</b> to send SMS alerts to users in
-        remote regions and a <b>buzzer alert mechanism</b> for instant local warnings
-        during critical weather conditions. Powered by <b>solar energy</b>, the solution
-        is sustainable, low-cost, and reliable.
-      </p>
-    </div>
+  <!-- USE CASES -->
+  <section class="use-cases">
+    <h2>Applications & Uses</h2>
+    <ul>
+      <li>Helps rural, hilly, and tribal regions receive weather alerts without internet</li>
+      <li>Supports agriculture planning and disaster preparedness</li>
+      <li>Useful for CubeSat, IoT, and environmental research studies</li>
+    </ul>
+  </section>
 
-    <div class="detail-card">
-      <h2><i class='bx bx-bulb'></i> Uses & Applications</h2>
-      <ul class="uses-list">
-        <li>Provides timely weather alerts to rural, hilly, and tribal areas without internet</li>
-        <li>Supports agriculture planning and disaster preparedness</li>
-        <li>Useful for CubeSat, IoT, and environmental research applications</li>
-        <li>Low-cost and scalable solution for real-time monitoring</li>
-      </ul>
-    </div>
+  <!-- ANIMATED RESOURCE CARDS -->
+  <section class="cubesat-resources">
 
-    <div class="detail-card">
-      <h2><i class='bx bx-folder-open'></i> Project Documents & Media</h2>
+    <h2 class="section-title">Project Resources</h2>
 
-      <div class="doc-table">
+    <div class="resource-grid">
 
-        <div class="doc-row">
-          <span>Project Report</span>
-          <a href="YOUR_PROJECT_REPORT_LINK" target="_blank" class="btn primary">View</a>
-        </div>
-
-        <div class="doc-row">
-          <span>Research Paper</span>
-          <a href="YOUR_PAPER_LINK" target="_blank" class="btn primary">View</a>
-        </div>
-
-        <div class="doc-row">
-          <span>Completion Certificate</span>
-          <a href="YOUR_CERTIFICATE_LINK" target="_blank" class="btn primary">View</a>
-        </div>
-
-        <div class="doc-row">
-          <span>Conference Certificate</span>
-          <a href="YOUR_CONFERENCE_LINK" target="_blank" class="btn primary">View</a>
-        </div>
-
-        <div class="doc-row">
-          <span>Project Video</span>
-          <a href="YOUR_YOUTUBE_LINK" target="_blank" class="btn secondary">
-            <i class='bx bxl-youtube'></i> Watch
-          </a>
-        </div>
-
+      <div class="resource-card">
+        <h3>📄 Project Report</h3>
+        <p>Complete technical documentation of the CubeSat project.</p>
+        <a href="#" target="_blank" class="resource-btn">View</a>
       </div>
-    </div>
 
+      <div class="resource-card">
+        <h3>📑 Research Paper</h3>
+        <p>Published / submitted research paper related to the project.</p>
+        <a href="#" target="_blank" class="resource-btn">View</a>
+      </div>
+
+      <div class="resource-card">
+        <h3>🎓 Completion Certificate</h3>
+        <p>Official project completion certification.</p>
+        <a href="#" target="_blank" class="resource-btn">View</a>
+      </div>
+
+      <div class="resource-card">
+        <h3>🏆 Conference Certificate</h3>
+        <p>Conference participation / presentation certificate.</p>
+        <a href="#" target="_blank" class="resource-btn">View</a>
+      </div>
+
+      <div class="resource-card">
+        <h3>🎥 Project Video</h3>
+        <p>Demonstration and explanation video of the CubeSat system.</p>
+        <a href="#" target="_blank" class="resource-btn">View</a>
+      </div>
+
+    </div>
   </section>
 
   <!-- CONTACT -->
@@ -90,15 +92,12 @@
     <h2>Contact</h2>
     <div class="contact-links">
       <a href="mailto:sivanaveenecemec@gmail.com"><i class='bx bx-envelope'></i> Email</a>
-      <a href="https://www.linkedin.com/in/sivanaveen-l/" target="_blank">
-        <i class='bx bxl-linkedin'></i> LinkedIn
-      </a>
-      <a href="https://github.com/sivanaveen27072004" target="_blank">
-        <i class='bx bxl-github'></i> GitHub
-      </a>
+      <a href="https://www.linkedin.com/in/sivanaveen-l/" target="_blank"><i class='bx bxl-linkedin'></i> LinkedIn</a>
+      <a href="https://github.com/sivanaveen27072004" target="_blank"><i class='bx bxl-github'></i> GitHub</a>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 Sivanaveen L. All rights reserved.</p>
   </footer>
