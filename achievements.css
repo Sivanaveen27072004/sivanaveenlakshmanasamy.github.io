@@ -15,25 +15,25 @@ body {
 /* HEADER */
 .ach-header {
   text-align: center;
-  padding: 3rem 1rem 2.5rem;
+  padding: 2.5rem 1rem;
   position: relative;
 }
 
-.ach-header h1 {
-  color: #38bdf8;
+.name {
   font-size: 2.6rem;
+  font-weight: 800;
+  color: #38bdf8;
 }
 
 .subtitle {
+  font-size: 1.2rem;
   color: #94a3b8;
-  margin-top: 0.4rem;
 }
 
-/* HOME */
 .home-btn {
   position: absolute;
-  top: 25px;
   left: 25px;
+  top: 25px;
   background: #38bdf8;
   color: #0f172a;
   padding: 0.6rem 1rem;
@@ -48,30 +48,48 @@ body {
   transform: scale(1.05);
 }
 
-/* CONTAINER */
-.achievements-container {
-  padding: 3rem 8%;
+/* ACHIEVEMENTS */
+.achievements {
+  padding: 2rem 10%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 35px;
 }
 
-/* CARD */
 .achievement-card {
-  background: rgba(15, 23, 42, 0.95);
+  background: rgba(15, 23, 42, 0.9);
   border-radius: 18px;
-  padding: 30px;
-  border-left: 6px solid #38bdf8;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
-  transition: 0.4s;
+  padding: 2rem;
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.12);
 }
 
-.achievement-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 45px rgba(56,189,248,0.25);
+/* 50/50 LAYOUT */
+.card-layout {
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
 
-.achievement-card h2 {
+/* IMAGE */
+.card-image {
+  flex: 1;
+}
+
+.card-image img {
+  width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  background: #020617;
+  padding: 20px;
+  border-radius: 14px;
+}
+
+/* CONTENT */
+.card-content {
+  flex: 1;
+}
+
+.card-content h2 {
   color: #38bdf8;
 }
 
@@ -80,53 +98,32 @@ body {
   font-size: 0.9rem;
 }
 
-/* BIG IMAGE */
-.company-image {
-  width: 100%;
-  margin: 20px 0;
-}
-
-.company-image img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: contain;
-  border-radius: 14px;
-  background: #020617;
-  padding: 20px;
-}
-
-/* TEXT */
-.achievement-card p {
+.card-content p {
+  margin: 12px 0;
   line-height: 1.8;
-  margin-bottom: 15px;
 }
 
-/* PACKAGE */
 .highlight {
-  background: #1e293b;
-  padding: 12px 18px;
-  border-radius: 8px;
-  color: #38bdf8;
-  display: inline-block;
-  margin-bottom: 12px;
+  margin-top: 12px;
+  color: #22c55e;
+  font-weight: 600;
 }
 
-/* COLLEGE */
+.college-credit {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
 .college-credit a {
   color: #38bdf8;
-  font-weight: 600;
   text-decoration: none;
-}
-
-.college-credit a:hover {
-  text-decoration: underline;
 }
 
 /* CONTACT */
 .contact {
-  background: #0f172a;
-  padding: 3rem 1rem;
   text-align: center;
+  padding: 3rem 1rem;
+  background: #0f172a;
 }
 
 .contact h2 {
@@ -143,22 +140,16 @@ body {
 
 .contact-links a {
   background: #1e293b;
-  padding: 0.8rem 1.3rem;
+  padding: 0.8rem 1.2rem;
   border-radius: 8px;
   color: #38bdf8;
   text-decoration: none;
-  transition: 0.3s;
 }
 
-.contact-links a:hover {
-  background: #334155;
-}
-
-/* FOOTER */
 footer {
   background: #1e293b;
-  text-align: center;
   padding: 1rem;
+  text-align: center;
   color: #94a3b8;
 }
 
@@ -166,26 +157,26 @@ footer {
 .animate {
   opacity: 0;
   transform: translateY(40px);
-  transition: 0.8s ease;
+  transition: all 0.8s ease;
 }
 
-.animate.show {
+.animate.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-  .ach-header h1 {
-    font-size: 1.9rem;
+  .card-layout {
+    flex-direction: column;
   }
 
-  .achievements-container {
-    padding: 2rem 5%;
+  .achievements {
+    padding: 2rem 6%;
   }
 
-  .company-image img {
-    max-height: 220px;
+  .name {
+    font-size: 2rem;
   }
 
   .home-btn {
