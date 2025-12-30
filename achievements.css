@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e2e8f0;
+}
+
+/* HEADER */
+.ach-header {
+  text-align: center;
+  padding: 3rem 1rem 2.5rem;
+  position: relative;
+}
+
+.ach-header h1 {
+  color: #38bdf8;
+  font-size: 2.6rem;
+}
+
+.subtitle {
+  color: #94a3b8;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* HOME BUTTON */
+.home-btn {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.home-btn:hover {
+  background: #0ea5e9;
+  transform: scale(1.05);
+}
+
+/* CONTAINER */
+.achievements-container {
+  padding: 3rem 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* CARD */
+.achievement-card {
+  display: flex;
+  gap: 25px;
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  border-left: 6px solid #38bdf8;
+  transition: 0.4s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(56,189,248,0.25);
+}
+
+/* LOGO */
+.company-logo img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* CONTENT */
+.company-content h2 {
+  color: #38bdf8;
+  margin-bottom: 5px;
+}
+
+.location {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.company-content p {
+  margin: 15px 0;
+  line-height: 1.7;
+}
+
+/* HIGHLIGHT */
+.highlight {
+  background: #1e293b;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: inline-block;
+  color: #38bdf8;
+}
+
+/* COLLEGE CREDIT */
+.college-credit a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.college-credit a:hover {
+  text-decoration: underline;
+}
+
+/* CONTACT */
+.contact {
+  background: #0f172a;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.contact h2 {
+  color: #38bdf8;
+  margin-bottom: 1.5rem;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  background: #1e293b;
+  padding: 0.8rem 1.3rem;
+  border-radius: 8px;
+  color: #38bdf8;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-links a:hover {
+  background: #334155;
+}
+
+/* FOOTER */
+footer {
+  background: #1e293b;
+  text-align: center;
+  padding: 1rem;
+  color: #94a3b8;
+}
+
+/* ANIMATION */
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .achievement-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .company-logo img {
+    margin: auto;
+  }
+
+  .ach-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .home-btn {
+    top: 15px;
+    left: 15px;
+    font-size: 0.85rem;
+  }
+
+  .achievements-container {
+    padding: 2rem 5%;
+  }
+}
